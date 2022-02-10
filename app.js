@@ -26,29 +26,38 @@ function birthdayIsLucky() {
         } else {
             outputBox.value = "Ohh no!!! This number is not lucky for you"
             const sum = calculateSum(dOB);
-            moreInfo.style.display = "block";
 
-            let userLuckyNumber = 2;
+            if (sum % 2 === 0) {
+                moreInfo.style.display = "block";
 
-            while (sum % userLuckyNumber != 0) {
-                userLuckyNumber = userLuckyNumber + 1;
+                let userLuckyNumber = 2;
+
+                while (sum % userLuckyNumber != 0) {
+                    userLuckyNumber = userLuckyNumber + 1;
+                }
+
+                let userLuckyNumberSecond = userLuckyNumber + 1;
+
+                while (sum % userLuckyNumberSecond != 0) {
+                    userLuckyNumberSecond = userLuckyNumberSecond + 1;
+                }
+
+                let userLuckyNumberThird = userLuckyNumberSecond + 1;
+
+                while (sum % userLuckyNumberThird != 0) {
+                    userLuckyNumberThird = userLuckyNumberThird + 1;
+                }
+                moreInfo.value = "Your lucky numbers(smaller) as per your Date of birth will be : " + userLuckyNumber + " , " + userLuckyNumberSecond + " & " + userLuckyNumberThird;
+            } else {
+                moreInfo.style.display = "block";
+
+                let userLuckyNumber = 2;
+
+                while (sum % userLuckyNumber != 0) {
+                    userLuckyNumber = userLuckyNumber + 1;
+                }
+                moreInfo.value = "Your lucky number as per your Date of birth will be : " + userLuckyNumber;
             }
-
-            let userLuckyNumberSecond = userLuckyNumber + 1;
-
-            while (sum % userLuckyNumberSecond != 0) {
-                userLuckyNumberSecond = userLuckyNumberSecond + 1;
-            }
-
-            let userLuckyNumberThird = userLuckyNumberSecond + 1;
-
-            while (sum % userLuckyNumberThird != 0) {
-                userLuckyNumberThird = userLuckyNumberThird + 1;
-            }
-
-
-
-            moreInfo.value = "Your lucky numbers(smaller) as per your Date of birth will be : " + userLuckyNumber + " , " + userLuckyNumberSecond + " & " + userLuckyNumberThird;
 
 
         }
