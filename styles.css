@@ -31,6 +31,7 @@ body {
     padding: 1rem;
     box-shadow: 6px 6px 2px rgba(0, 0, 0, 0.4);
     border: 2px dotted var(--font-color);
+    border-radius: 7px;
 }
 
 #discription {
@@ -145,6 +146,7 @@ input {
     text-align: center;
     border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .footer-header {
