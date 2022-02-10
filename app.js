@@ -23,19 +23,31 @@ function birthdayIsLucky() {
             outputBox.value = "Perfect! This number is lucky for you"
         } else {
             outputBox.value = "Ohh no!!! This number is not lucky for you"
-            let userLuckyNumber = 2;
             const sum = calculateSum(dOB);
+            moreInfo.style.display = "block";
 
-            // for (let i = 0; i < 3; i++) {
+            let userLuckyNumber = 2;
+
             while (sum % userLuckyNumber != 0) {
                 userLuckyNumber = userLuckyNumber + 1;
             }
 
-            moreInfo.style.display = "block";
+            let userLuckyNumberSecond = userLuckyNumber + 1;
+
+            while (sum % userLuckyNumberSecond != 0) {
+                userLuckyNumberSecond = userLuckyNumberSecond + 1;
+            }
+
+            let userLuckyNumberThird = userLuckyNumberSecond + 1;
+
+            while (sum % userLuckyNumberThird != 0) {
+                userLuckyNumberThird = userLuckyNumberThird + 1;
+            }
 
 
-            moreInfo.value = "Your lucky number as per your Date of birth will be : " + userLuckyNumber;
-            console.log(userLuckyNumber);
+
+            moreInfo.value = "Your lucky numbers(smaller) as per your Date of birth will be : " + userLuckyNumber + " , " + userLuckyNumberSecond + " & " + userLuckyNumberThird;
+
 
         }
     } else {
