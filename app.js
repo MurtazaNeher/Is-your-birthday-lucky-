@@ -20,6 +20,8 @@ function birthdayIsLucky() {
     const sum = calculateSum(dOB);
     if (sum && dOB) {
         if (Number(sum % luckyNumber1) === 0) {
+            moreInfo.style.display = "none";
+
             outputBox.value = "Perfect! This number is lucky for you"
         } else {
             outputBox.value = "Ohh no!!! This number is not lucky for you"
@@ -67,9 +69,6 @@ function calculateSum(dOB) {
     return sum;
 }
 
-function getMoreInfo() {
-
-}
 
 function resetFunction() {
     dateOfBirth.value = "null";
@@ -78,6 +77,5 @@ function resetFunction() {
     moreInfo.value = "";
     moreInfo.style.display = "none";
     outputBox.style.display = "none";
-
 
 }
