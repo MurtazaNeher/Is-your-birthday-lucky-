@@ -228,11 +228,12 @@ input {
         flex-direction: column;
     }
     #more-info {
-        width: 90%;
-        height: 50px;
+        width: 95%;
+        height: 80px;
     }
     #output-box {
-        width: 90%;
+        width: 95%;
+        height: 90px;
         font-size: 25px;
     }
 }
